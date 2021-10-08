@@ -1,5 +1,5 @@
 import DisplayEmails from  './components/DisplayEmails';
-import Email from './components/Email'
+
 import './App.css';
 import {Component} from 'react'
  
@@ -51,8 +51,8 @@ class App extends Component{
   return (
     <div className="App">  
        <h1> FAKE GMAIL </h1>
-       <h2>Current Emails</h2> 
-       <p> {Object.keys(this.state.emails).length ? `${this.state.emails[0]?.sender} - ${this.state.emails[0]?.subject}`: "" }</p>
+       <h2>Current Emails</h2>
+       < DisplayEmails emails = {this.state.emails} />  
     </div>
   );
 }
