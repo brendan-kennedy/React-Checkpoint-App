@@ -1,5 +1,5 @@
 import DisplayEmails from  './components/DisplayEmails';
-
+import EmailData from  './components/emailData';
 import './App.css';
 import {Component} from 'react'
  
@@ -41,9 +41,12 @@ class App extends Component{
    console.log(this.state.emails[0])
 }
 
+showEmail = () => (props) => {
+return ( <p>{props[0]}</p> )
 
-  
-  
+}
+
+
   render () { 
     
   
@@ -52,10 +55,14 @@ class App extends Component{
     <div className="App">  
        <h1> FAKE GMAIL </h1>
        <h2>Current Emails</h2>
-       < DisplayEmails emails = {this.state.emails} />  
+       <DisplayEmails emails = {this.state.emails} />
+       <h2> First Email </h2>
+       <p><EmailData emails = {this.state.emails} /> </p> 
+       <button onClick = {this.showEmail(this.state.emails)}>Click Me to See an Email!</button> 
     </div>
   );
 }
 }
 
 export default App;
+
