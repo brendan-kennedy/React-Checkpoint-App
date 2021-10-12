@@ -4,9 +4,9 @@ import Subject from './Subject'
 import Message from './Message'
 
   
-  const EmailData = (props) => {
+  const EmailData = (props,key) => {
     return (
-    <span> {Object.values(props[0])} </span> 
+    <span>  </span> 
   )
   }
 

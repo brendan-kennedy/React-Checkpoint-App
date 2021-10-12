@@ -2,6 +2,7 @@ import DisplayEmails from  './components/DisplayEmails';
 import EmailData from  './components/emailData';
 import './App.css';
 import {Component} from 'react'
+import Sender from  './components/Sender';
  
 
 
@@ -41,14 +42,10 @@ class App extends Component{
    console.log(this.state.emails[0])
 }
 
-showEmail = () => (props) => {
-return ( <p>{props[0]}</p> )
-
-}
 
 
   render () { 
-    
+    const {emails} = this.state
   
   
   return (
@@ -57,8 +54,8 @@ return ( <p>{props[0]}</p> )
        <h2>Current Emails</h2>
        <DisplayEmails emails = {this.state.emails} />
        <h2> First Email </h2>
-       <p><EmailData emails = {this.state.emails} /> </p> 
-       <button onClick = {this.showEmail(this.state.emails)}>Click Me to See an Email!</button> 
+       <p></p> 
+          
     </div>
   );
 }
